@@ -16,7 +16,7 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
   const increaseQty = () => setQuantity(quantity + 1);
   const decreaseQty = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
-  const totalPrice = product.price * quantity;
+  const totalPrice = product.price * quantity*0.3;
 
   return (
     <>
