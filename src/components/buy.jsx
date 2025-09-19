@@ -16,11 +16,11 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
   const increaseQty = () => setQuantity(quantity + 1);
   const decreaseQty = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
-<<<<<<< HEAD
-  // ✅ Normal price (without 0.3)
-=======
 
->>>>>>> 7e589d9 (some thind changed)
+  
+
+
+
   const finalPrice = Math.floor(product.price * 88);
   const totalPrice = finalPrice * quantity;
 

@@ -1,14 +1,18 @@
+
+.original-img{
+    height: 200px;
+    width: 200px;
+     object-fit: contain;
+  }
+
+
 @media (min-width: 400px) and (max-width: 550px) {
   .my-box {
     
     height: 160px;
     width: 130px;
   }
-  .original-img{
-    max-height: 200px;
-    width: 200px;
-     object-fit: contain;
-  }
+  
   .img {
     max-height: 50px;
     width: 60px;
