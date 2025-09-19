@@ -12,7 +12,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-500 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
         {/* Brand / Logo */}
         <h1 className="text-2xl font-bold text-center text-gray-800">
@@ -71,7 +71,7 @@ export default function Login() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition duration-300"
+            className="w-full bg-blue-600 hover:bg-blue-700 hover:cursor-pointer text-white py-2 rounded-lg font-semibold transition duration-300"
           >
             Login
           </button>

@@ -5,21 +5,22 @@ function AccountPage() {
   const navigate = useNavigate();
 
   function goHome() {
-    navigate('/');
+    navigate("/");
   }
 
   function goToSettings() {
-    navigate('/settings');
+    navigate("/settings");
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-100 to-indigo-200 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-purple-800 p-6">
       {/* Profile Card */}
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md flex flex-col items-center">
+        
         {/* Profile Picture */}
         <div className="w-24 h-24 rounded-full overflow-hidden mb-6 shadow-lg">
           <img
-            src="https://i.pravatar.cc/150?img=12"
+            src="/mohan.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
@@ -28,21 +29,18 @@ function AccountPage() {
         {/* Name */}
         <h1 className="text-2xl font-bold text-gray-800 mb-2">Mohan Krishna</h1>
 
-        {/* Role or tagline */}
+        {/* Role */}
         <p className="text-indigo-600 mb-6">Front End Dev</p>
 
-        {/* Info Grid */}
-        <div className="w-full grid grid-cols-1 gap-4 text-gray-700">
-          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
-            <span className="font-semibold">Email:</span>
+        {/* Info (flex layout, no labels) */}
+        <div className="flex flex-col gap-4 w-full text-gray-700">
+          <div className="flex items-center justify-center bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
             <span className="text-gray-600">mohankrishna@email.com</span>
           </div>
-          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
-            <span className="font-semibold">Phone:</span>
+          <div className="flex items-center justify-center bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
             <span className="text-gray-600">+91 9553391580</span>
           </div>
-          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
-            <span className="font-semibold">Address:</span>
+          <div className="flex items-center justify-center bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
             <span className="text-gray-600">Yemmiganur, Kurnool, AP, India</span>
           </div>
         </div>

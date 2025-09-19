@@ -31,7 +31,7 @@ export default function CartPage() {
 
   if (!product) {
     return (
-      <div className="flex justify-center bg-amber-300 items-center h-screen">
+      <div className="flex justify-center bg-white items-center h-screen">
      <div className="loader"></div>
       </div>
     );
