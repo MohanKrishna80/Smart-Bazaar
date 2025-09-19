@@ -58,7 +58,7 @@ export default function ProductDetails() {
         <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
         <h6 className="text-lg mb-2 flex items-center gap-1">
           <i className="fa-solid fa-indian-rupee-sign"></i>
-          {Math.floor(product.price * 88)}/-
+          {Math.floor(product.price * 88*0.3)}/-
         </h6>
 
         <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-300">
