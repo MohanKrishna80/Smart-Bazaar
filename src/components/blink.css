@@ -1,0 +1,12 @@
+@keyframes blinkText {
+  0%, 100% {
+    background-color: red;   /* Start & end color */
+  }
+  50% {
+    background-color: blue;  /* Middle color */
+  }
+}
+
+.blink-text {
+  animation: blinkText 0.5s infinite;
+}

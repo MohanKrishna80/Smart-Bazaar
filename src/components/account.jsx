@@ -1,0 +1,70 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+function AccountPage() {
+  const navigate = useNavigate();
+
+  function goHome() {
+    navigate('/');
+  }
+
+  function goToSettings() {
+    navigate('/settings');
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-100 to-indigo-200 p-6">
+      {/* Profile Card */}
+      <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md flex flex-col items-center">
+        {/* Profile Picture */}
+        <div className="w-24 h-24 rounded-full overflow-hidden mb-6 shadow-lg">
+          <img
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Name */}
+        <h1 className="text-2xl font-bold text-gray-800 mb-2">Mohan Krishna</h1>
+
+        {/* Role or tagline */}
+        <p className="text-indigo-600 mb-6">Front End Dev</p>
+
+        {/* Info Grid */}
+        <div className="w-full grid grid-cols-1 gap-4 text-gray-700">
+          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
+            <span className="font-semibold">Email:</span>
+            <span className="text-gray-600">mohankrishna@email.com</span>
+          </div>
+          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
+            <span className="font-semibold">Phone:</span>
+            <span className="text-gray-600">+91 9553391580</span>
+          </div>
+          <div className="flex justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
+            <span className="font-semibold">Address:</span>
+            <span className="text-gray-600">Yemmiganur, Kurnool, AP, India</span>
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex mt-8 gap-4 w-full">
+          <button
+            onClick={goHome}
+            className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-500 transition-colors duration-300"
+          >
+            Home
+          </button>
+          <button
+            onClick={goToSettings}
+            className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-500 transition-colors duration-300"
+          >
+            Settings
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default AccountPage;
