@@ -65,7 +65,7 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
             </div>
 
             <p className="text-purple-600 font-bold text-xl mt-2">
-              Total: ₹{totalPrice*0.3}
+              Total: ₹{totalPrice}
             </p>
 
             <div className="flex gap-4 mt-6">
