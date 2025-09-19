@@ -34,7 +34,7 @@ export default function Prod({ product }) {
 
         <p className="bg-blue-50 border border-gray-400 rounded-md px-6 py-2 flex items-center gap-1">
           Price: <i className="fa-solid fa-indian-rupee-sign"></i>
-          <b>{Math.floor(product.price * 88 * 0.3)}/-</b>
+          <b>{Math.floor(product.price * 88 )}/-</b>
         </p>
       </div>
     </div>
