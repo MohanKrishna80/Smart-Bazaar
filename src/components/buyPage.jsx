@@ -48,6 +48,6 @@ export default function BuyPage() {
       </div>
     );
 
-  // Pass product to Buy component; quantity will start from 1 inside Buy
+  
   return <Buy product={product} />;
 }

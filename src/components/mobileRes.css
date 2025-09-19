@@ -1,0 +1,32 @@
+@media (min-width: 400px) and (max-width: 550px) {
+  .my-box {
+    
+    height: 160px;
+    width: 130px;
+  }
+  .original-img{
+    max-height: 200px;
+    width: 200px;
+     object-fit: contain;
+  }
+  .img {
+    max-height: 50px;
+    width: 60px;
+    object-fit: contain;
+  }
+  .title {
+    font-size:8px;
+  }
+  .buy{
+    font-size: xx-small;
+    padding: 6px;
+  }
+  .price{
+    font-size: xx-small;
+    padding: 5px;
+  }
+  .discount{
+    font-size: xx-small;
+    padding: 3px;
+  }
+}

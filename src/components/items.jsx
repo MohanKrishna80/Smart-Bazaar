@@ -4,14 +4,7 @@ import axios from "axios";
 import Prod from "./prod";
 import "./loader.css"
 
-function shuffleArray(array) {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
+
 
 export default function Items() {
   const [products, setProducts] = useState([]);
@@ -23,8 +16,8 @@ export default function Items() {
           "https://dummyjson.com/products?limit=100"
         );
         const items = response.data.products;
-        const shuffledItems = shuffleArray(items);
-        setProducts(shuffledItems);
+        
+        setProducts(items);
       } catch (err) {
         console.error("Failed to load products:", err);
       }
