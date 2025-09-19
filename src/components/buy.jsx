@@ -16,7 +16,9 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
   const increaseQty = () => setQuantity(quantity + 1);
   const decreaseQty = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
-  const totalPrice = product.price * quantity;
+  // ✅ Normal price (without 0.3)
+  const finalPrice = Math.floor(product.price * 88);
+  const totalPrice = finalPrice * quantity;
 
   return (
     <>
@@ -47,7 +49,6 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
 
             <h3 className="text-lg font-semibold mt-2">{product.title}</h3>
 
-            {/* Quantity selector */}
             <div className="flex items-center gap-3 mt-3">
               <button
                 onClick={decreaseQty}
