@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 export default function Buy({ product, quantity: initialQty = 1 }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(product?.images?.[0] || "");
+  const [selectedImage, setSelectedImage] = useState(
+    product?.images?.[0] || ""
+  );
   const [quantity, setQuantity] = useState(initialQty);
 
   useEffect(() => {
@@ -16,12 +18,7 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
   const increaseQty = () => setQuantity(quantity + 1);
   const decreaseQty = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
-
-  
-
-
-
-  const finalPrice = Math.floor(product.price * 88);
+  const finalPrice = Math.floor(product.price * 88 * 0.3);
   const totalPrice = finalPrice * quantity;
 
   return (
@@ -29,7 +26,9 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-2xl shadow-lg p-6 w-[90%] max-w-md">
-            <h2 className="text-2xl font-bold mb-4 text-center">Confirm Purchase</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Confirm Purchase
+            </h2>
 
             <img
               src={selectedImage}
@@ -44,7 +43,9 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
                   src={img}
                   alt={`${product.title}-${i}`}
                   className={`w-16 h-16 object-contain rounded cursor-pointer border ${
-                    selectedImage === img ? "border-purple-600" : "border-gray-200"
+                    selectedImage === img
+                      ? "border-purple-600"
+                      : "border-gray-200"
                   }`}
                   onClick={() => setSelectedImage(img)}
                 />
@@ -60,7 +61,9 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
               >
                 -
               </button>
-              <span className="px-4 py-1 border border-gray-500 rounded">{quantity}</span>
+              <span className="px-4 py-1 border border-gray-500 rounded">
+                {quantity}
+              </span>
               <button
                 onClick={increaseQty}
                 className="px-3 py-1 border border-gray-500 rounded hover:bg-gray-200"
@@ -82,7 +85,9 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
               </button>
               <button
                 onClick={() => {
-                  alert(`✅ Purchase Successful\nQuantity: ${quantity}\nTotal: ₹${totalPrice}`);
+                  alert(
+                    ` Purchase Successful\nQuantity: ${quantity}\nTotal: ₹${totalPrice}`
+                  );
                   navigate("/");
                 }}
                 className="flex-1 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition"

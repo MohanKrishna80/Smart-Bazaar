@@ -1,36 +1,61 @@
+.original-img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
 
-.original-img{
-    height: 200px;
-    width: 200px;
-     object-fit: contain;
-  }
 
-
-@media (min-width: 400px) and (max-width: 550px) {
+@media (min-width: 300px) and (max-width: 720px) {
   .my-box {
-    
-    height: 160px;
+
+    height: 180px;
     width: 130px;
   }
-  
+
   .img {
-    max-height: 50px;
-    width: 60px;
+    max-height: 80px;
+    width: 80px;
     object-fit: contain;
   }
+
   .title {
-    font-size:8px;
+    font-size: 8px;
   }
-  .buy{
+
+  .buy {
     font-size: xx-small;
     padding: 6px;
   }
-  .price{
+
+  .price {
     font-size: xx-small;
     padding: 5px;
   }
-  .discount{
+
+  .discount {
     font-size: xx-small;
     padding: 3px;
   }
+  .details {
+    display: flex;
+    flex-direction: column;
+    max-width:fit-content;
+    overflow: scroll;
+  }
+  .details-img-card {
+    width: 100%;
+    height: 50%;
+  }
+  .details-img {
+    width: 100%;
+    height: 50%;
+  }
+  .details-info {
+    width: 100%;
+  
+  }
+  .search-icon{
+    padding-right: 30px;
+  }
 }
+

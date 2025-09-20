@@ -20,13 +20,11 @@ export default function Signup() {
       return;
     }
     console.log("User Registered:", formData);
-    // 🔑 Add signup logic here (API call)
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center mt-16 bg-gradient-to-r from-purple-400 to-purple-500 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        {/* Brand / Logo */}
         <h1 className="text-2xl font-bold text-center text-gray-800">
           MyProduct
         </h1>
@@ -34,9 +32,7 @@ export default function Signup() {
           Create your account to get started
         </p>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-          {/* Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Full Name
@@ -52,7 +48,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Email Address
@@ -64,11 +59,10 @@ export default function Signup() {
               onChange={handleChange}
               required
               className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="you@example.com"
+              placeholder="Enter your Email"
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Password
@@ -80,11 +74,10 @@ export default function Signup() {
               onChange={handleChange}
               required
               className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="********"
+              placeholder="Password"
             />
           </div>
 
-          {/* Confirm Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Confirm Password
@@ -96,11 +89,10 @@ export default function Signup() {
               onChange={handleChange}
               required
               className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="********"
+              placeholder="Re-enter Password"
             />
           </div>
 
-          {/* Terms & Conditions */}
           <div className="flex items-center text-sm">
             <input
               type="checkbox"
@@ -115,7 +107,6 @@ export default function Signup() {
             </span>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition duration-300"
@@ -124,14 +115,12 @@ export default function Signup() {
           </button>
         </form>
 
-        {/* Divider */}
         <div className="flex items-center my-6">
           <hr className="flex-grow border-gray-300" />
           <span className="px-2 text-sm text-gray-500">or</span>
           <hr className="flex-grow border-gray-300" />
         </div>
 
-        {/* Social Signup */}
         <div className="flex space-x-4">
           <button className="flex-1 border rounded-lg py-2 hover:bg-gray-50 transition">
             <i className="fab fa-google text-red-500 mr-2"></i> Google
@@ -141,7 +130,6 @@ export default function Signup() {
           </button>
         </div>
 
-        {/* Login Redirect */}
         <p className="text-sm text-gray-600 text-center mt-6">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-600 hover:underline">

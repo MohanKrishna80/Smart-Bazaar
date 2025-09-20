@@ -46,7 +46,7 @@ export default function Cart2() {
   if (cart.length === 0) {
     return (
       <div className="flex flex-col justify-center items-center h-screen">
-        <h2 className="text-2xl font-semibold">Oops...! Your Cart is Empty</h2>
+        <h2 className="text-2xl font-semibold text-white">Oops...! Your Cart is Empty</h2>
         <button
           onClick={goHome}
           className="bg-indigo-600 text-white rounded px-3 py-1.5 mt-4"

@@ -49,16 +49,16 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="bg-white flex h-[100vh] mt-10 shadow-lg rounded overflow-hidden">
-      <div className="flex justify-center items-center w-1/2 p-4 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-l-xl shadow-inner">
+    <div className="bg-white flex h-[100vh] mt-10 shadow-lg rounded overflow-hidden details">
+      <div className="flex details-img justify-center items-center w-1/2 p-4 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-l-xl shadow-inner">
         <ProdCourosel images={product.images} />
       </div>
 
-      <div className="bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 w-1/2 p-6 text-black rounded border border-gray-400 flex flex-col gap-3">
+      <div className="details-info bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200 w-1/2 p-6 text-black rounded border border-gray-400 flex flex-col gap-3">
         <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
         <h6 className="text-lg mb-2 flex items-center gap-1">
           <i className="fa-solid fa-indian-rupee-sign"></i>
-          {Math.floor(product.price * 88)}/-
+          <p className="font-bold">{Math.floor(product.price * 88*0.3)}/-</p>
         </h6>
 
         <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-300">

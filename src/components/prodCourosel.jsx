@@ -22,7 +22,7 @@ export default function ProdCourosel({ images }) {
             <img
               src={img}
               alt={`Product ${index + 1}`}
-              className="object-contain max-h-[500px] w-full rounded-lg shadow-md"
+              className="object-contain max-h-[500px] w-full rounded-lg "
             />
           </div>
         ))}

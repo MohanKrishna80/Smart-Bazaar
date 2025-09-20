@@ -19,7 +19,7 @@ function NavBar() {
               placeholder="Search..."
               className="px-3 py-1 w-full text-black outline-none rounded-l-lg"
             />
-            <i className="fa-solid fa-magnifying-glass text-xl text-gray-500 p-2 sm:pr-4"></i>
+            <i className="fa-solid fa-magnifying-glass text-xl text-gray-500 p-2 search-icon"></i>
           </div>
         </div>
 
