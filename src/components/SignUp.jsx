@@ -25,8 +25,8 @@ export default function Signup() {
   return (
     <div className="min-h-screen flex items-center justify-center mt-16 bg-gradient-to-r from-purple-400 to-purple-500 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-center text-gray-800">
-          MyProduct
+        <h1 className="text-2xl font-bold text-center text-gray-800 underline">
+          Smart Bazzar
         </h1>
         <p className="text-sm text-gray-500 text-center mt-1">
           Create your account to get started

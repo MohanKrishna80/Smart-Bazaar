@@ -9,8 +9,8 @@ function NavBar() {
     <nav className="bg-purple-600 w-full fixed z-10 shadow-md">
       <div className="flex items-center justify-between px-4 md:px-6 h-16 text-white">
         <div className="flex items-center gap-3 flex-1">
-          <div className="bg-black text-gray-200 px-3 py-1 rounded font-bold">
-            LOGO
+          <div className="bg-black text-gray-200 px-3 py-1 rounded font-bold hover:cursor-pointer">
+            SM
           </div>
 
           <div className="flex md:hidden flex-1 bg-white rounded-lg">

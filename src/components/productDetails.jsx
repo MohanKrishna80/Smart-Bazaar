@@ -4,6 +4,7 @@ import ProdCourosel from "./prodCourosel";
 import { useParams, useNavigate } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./loader.css";
+import Footer from "./footer";
 
 export default function ProductDetails() {
   const [product, setProduct] = useState(null);
@@ -49,8 +50,10 @@ export default function ProductDetails() {
   }
 
   return (
+    <>
+
     <div className="bg-white flex h-[100vh] mt-10 shadow-lg rounded overflow-hidden details">
-      <div className="flex details-img justify-center items-center w-1/2 p-4 bg-gradient-to-br from-purple-100 via-purple-200 to-purple-300 rounded-l-xl shadow-inner">
+      <div className="flex details-img justify-center items-center w-1/2 p-4 bg-gradient-to-br from-purple-200 via-purple-300 to-purple-400 rounded-l-xl shadow-inner">
         <ProdCourosel images={product.images} />
       </div>
 
@@ -117,5 +120,10 @@ export default function ProductDetails() {
         </button>
       </div>
     </div>
+    <div className="relative bottom-20 bg-black">
+
+      <Footer />
+    </div>
+    </>
   );
 }

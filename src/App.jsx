@@ -15,7 +15,7 @@ import BuyPage from "./components/buyPage";
 function App() {
   return (
    
-      <div className="overflow-hidden bg-purple-600 h-full w-full">
+      <div className="overflow-hidden bg-purple-600 h-fit w-full">
         <NavBar />
         <Routes>
           <Route path="/" element={<Ecart />} />
