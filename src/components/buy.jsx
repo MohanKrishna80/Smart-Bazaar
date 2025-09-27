@@ -36,22 +36,6 @@ export default function Buy({ product, quantity: initialQty = 1 }) {
               className="w-full h-64 object-contain rounded"
             />
 
-            <div className="flex gap-2 overflow-x-auto mt-2">
-              {product.images?.map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt={`${product.title}-${i}`}
-                  className={`w-16 h-16 object-contain rounded cursor-pointer border ${
-                    selectedImage === img
-                      ? "border-purple-600"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => setSelectedImage(img)}
-                />
-              ))}
-            </div>
-
             <h3 className="text-lg font-semibold mt-2">{product.title}</h3>
 
             <div className="flex items-center gap-3 mt-3">

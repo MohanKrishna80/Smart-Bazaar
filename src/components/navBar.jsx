@@ -1,9 +1,11 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function NavBar() {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  
 
   return (
     <nav className="bg-purple-600 w-full fixed z-10 shadow-md">

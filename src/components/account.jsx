@@ -14,25 +14,25 @@ function AccountPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-purple-800 p-6">
-      {/* Profile Card */}
+      
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md flex flex-col items-center">
         
-        {/* Profile Picture */}
+        
         <div className="w-24 h-24 rounded-full overflow-hidden mb-6 shadow-lg">
           <img
-            src="/mohan.jpg"
+            src="/mohan2.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Name */}
+      
         <h1 className="text-2xl font-bold text-gray-800 mb-2">Mohan Krishna</h1>
 
-        {/* Role */}
+        
         <p className="text-indigo-600 mb-6">Front End Dev</p>
 
-        {/* Info (flex layout, no labels) */}
+       
         <div className="flex flex-col gap-4 w-full text-gray-700">
           <div className="flex items-center justify-center bg-gray-100 px-4 py-2 rounded-lg shadow-sm">
             <span className="text-gray-600">mohankrishna@email.com</span>
@@ -45,7 +45,7 @@ function AccountPage() {
           </div>
         </div>
 
-        {/* Buttons */}
+        
         <div className="flex mt-8 gap-4 w-full">
           <button
             onClick={goHome}
