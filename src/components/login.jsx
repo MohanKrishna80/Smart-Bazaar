@@ -62,7 +62,7 @@ export default function Login() {
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    value: "@,
                     message: "Enter a valid email",
                   },
                 })}
