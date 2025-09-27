@@ -34,7 +34,7 @@ export default function Login() {
           <div className="mt-6 text-center animate-fade-in">
             <div className="bg-green-50 border border-green-300 rounded-xl p-4 sm:p-6 shadow-inner break-words">
               <h2 className="text-xl sm:text-2xl font-bold text-green-700 mb-3 sm:mb-4">
-                🎉 Welcome, {submittedData.email.split("@")[0]}!
+                 Welcome, {submittedData.email.split("@")[0]}!
               </h2>
               <p className="text-gray-700 mb-2 break-words">
                 <strong>Email:</strong> {submittedData.email}
@@ -52,7 +52,7 @@ export default function Login() {
           </div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
-            {/* Email */}
+            
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Email Address
@@ -74,7 +74,7 @@ export default function Login() {
               )}
             </div>
 
-            {/* Password */}
+           
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Password
@@ -93,7 +93,7 @@ export default function Login() {
               )}
             </div>
 
-            {/* Remember Me & Forgot Password */}
+          
             <div className="flex items-center justify-between text-sm">
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="h-4 w-4 text-blue-600 rounded" />
@@ -104,7 +104,7 @@ export default function Login() {
               </Link>
             </div>
 
-            {/* Submit */}
+           
             <button
               type="submit"
               disabled={isSubmitting}
@@ -113,14 +113,14 @@ export default function Login() {
               {isSubmitting ? "Logging in..." : "Login"}
             </button>
 
-            {/* Divider */}
+           
             <div className="flex items-center my-6">
               <hr className="flex-grow border-gray-300" />
               <span className="px-2 text-sm text-gray-500">or</span>
               <hr className="flex-grow border-gray-300" />
             </div>
 
-            {/* Social buttons */}
+          
             <div className="flex space-x-4">
               <button className="flex-1 border rounded-lg py-2 hover:bg-gray-50 transition">
                 <i className="fab fa-google text-red-500 mr-2"></i> Google
@@ -130,7 +130,7 @@ export default function Login() {
               </button>
             </div>
 
-            {/* Signup Redirect */}
+            
             <p className="text-sm text-gray-600 text-center mt-6">
               Don’t have an account?{" "}
               <Link to="/signup" className="text-blue-600 hover:underline">
