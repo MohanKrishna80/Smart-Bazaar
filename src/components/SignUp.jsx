@@ -13,7 +13,6 @@ export default function Signup() {
   } = useForm();
 
   const onSubmit = (data) => {
-    
     setTimeout(() => {
       setRegisteredUser(data);
       reset();
@@ -23,26 +22,26 @@ export default function Signup() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-500 px-4 py-10">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-center text-gray-800 underline">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 underline">
           Smart Bazaar
         </h1>
-        <p className="text-sm text-gray-500 text-center mt-1">
+        <p className="text-sm sm:text-base text-gray-500 text-center mt-1">
           {registeredUser
             ? "Registration Successful!"
             : "Create your account to get started"}
         </p>
 
         {registeredUser ? (
-          <div className="mt-8 text-center animate-fade-in">
-            <div className="bg-green-50 border border-green-300 rounded-xl p-6 shadow-inner">
-              <h2 className="text-2xl font-bold text-green-700 mb-4">
+          <div className="mt-6 text-center animate-fade-in">
+            <div className="bg-green-50 border border-green-300 rounded-xl p-4 sm:p-6 shadow-inner break-words">
+              <h2 className="text-xl sm:text-2xl font-bold text-green-700 mb-3 sm:mb-4">
                  Welcome, {registeredUser.name}!
               </h2>
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-700 mb-2 break-words">
                 <strong>Email:</strong> {registeredUser.email}
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-4 break-words">
                 Your account has been created successfully.
               </p>
               <Link
@@ -71,7 +70,6 @@ export default function Signup() {
               )}
             </div>
 
-           
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Email Address
@@ -85,7 +83,7 @@ export default function Signup() {
                     message: "Enter a valid email",
                   },
                 })}
-                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 break-words"
                 placeholder="Enter your Email"
               />
               {errors.email && (
@@ -93,7 +91,7 @@ export default function Signup() {
               )}
             </div>
 
-           
+          
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Password
@@ -128,9 +126,7 @@ export default function Signup() {
                 placeholder="Re-enter Password"
               />
               {errors.confirmPassword && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.confirmPassword.message}
-                </p>
+                <p className="text-red-500 text-sm mt-1">{errors.confirmPassword.message}</p>
               )}
             </div>
 
@@ -152,7 +148,7 @@ export default function Signup() {
               )}
             </div>
 
-            
+          
             <button
               type="submit"
               disabled={isSubmitting}
@@ -161,7 +157,7 @@ export default function Signup() {
               {isSubmitting ? "Signing up..." : "Sign Up"}
             </button>
 
-           
+            
             <div className="flex items-center my-6">
               <hr className="flex-grow border-gray-300" />
               <span className="px-2 text-sm text-gray-500">or</span>
@@ -178,7 +174,7 @@ export default function Signup() {
               </button>
             </div>
 
-           
+         
             <p className="text-sm text-gray-600 text-center mt-6">
               Already have an account?{" "}
               <Link to="/login" className="text-blue-600 hover:underline">

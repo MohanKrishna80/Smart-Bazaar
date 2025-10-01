@@ -2,10 +2,15 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setValue } from "../redux/slices/searchSlice";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
+  const SearchText = useSelector((state) => state.search);
+  const dispatch = useDispatch();
+  console.log(SearchText);
 
   return (
     <nav className="bg-purple-600 w-full fixed z-10 shadow-md">
@@ -20,6 +25,8 @@ function NavBar() {
               type="text"
               placeholder="Search..."
               className="px-3 py-1 w-full text-black outline-none rounded-l-lg"
+              value={SearchText}
+              onChange={(e) => dispatch(setValue(e.target.value))}
             />
             <i className="fa-solid fa-magnifying-glass text-xl text-gray-500 p-2 search-icon"></i>
           </div>
@@ -51,6 +58,8 @@ function NavBar() {
                 type="text"
                 placeholder="Search Products, Electronics and More"
                 className="px-3 py-1 w-full text-black outline-none rounded-l-lg"
+                 value={SearchText}
+              onChange={(e) => dispatch(setValue(e.target.value))}
               />
               <i className="fa-solid fa-magnifying-glass text-xl text-gray-500 p-2 pr-7 "></i>
             </div>
